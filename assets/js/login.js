@@ -1,3 +1,4 @@
+// 入口函数
 jQuery(function () {
   // 点击登录的a链接
   $('.login .link').on('click', function () {
