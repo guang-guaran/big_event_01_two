@@ -25,18 +25,18 @@
 
       <!-- 2.2 login模块 -->
       <div class="login">
-        <form class="layui-form" action="">
+        <form id="formLogin" class="layui-form" action="">
           <!-- 用户名 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
-            <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
-              class="layui-input">
+            <input value="liu888" type="text" name="username" required lay-verify="required|username"
+              placeholder="请输入用户名" autocomplete="off" class="layui-input">
           </div>
           <!-- 密码 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
-            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
-              class="layui-input">
+            <input value="123123" type="password" name="password" required lay-verify="required|password"
+              placeholder="请输入密码" autocomplete="off" class="layui-input">
           </div>
           <!-- 登录按钮 -->
           <div class="layui-form-item">
@@ -52,20 +52,20 @@
 
       <!-- 2.3 注册模块 -->
       <div class="register" style="display: none;">
-        <form class="layui-form" action="">
+        <form id="formReg" class="layui-form" action="">
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
-            <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
-              class="layui-input">
+            <input type="text" name="username" required lay-verify="required|username" placeholder="请输入用户名"
+              autocomplete="off" class="layui-input">
           </div>
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
-            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
-              class="layui-input">
+            <input type="password" name="password" required lay-verify="required|password" placeholder="请输入密码"
+              autocomplete="off" class="layui-input">
           </div>
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
-            <input type="password" name="repassword" required lay-verify="required" placeholder="请再次输入密码"
+            <input type="password" name="repassword" required lay-verify="required|rePwd" placeholder="请再次输入密码"
               autocomplete="off" class="layui-input">
           </div>
           <div class="layui-form-item">
@@ -79,8 +79,16 @@
     </div>
   </div>
 
+  <!-- 引入layui文件 -->
+  <script src="./assets/lib/layui/layui.all.js"></script>
   <!-- 引入jQuery文件 -->
   <script src="./assets/lib/jquery.js"></script>
+  <!-- 导入axios文件 -->
+  <script src="./assets/lib/axios.js"></script>
+
+  <!-- 公共类的js要导入axios之后 自己js的之前 -->
+  <script src="./assets/js/common.js"></script>
+
   <!-- 引入自己的js文件 -->
   <script src="./assets/js/login.js"></script>
 </body>
