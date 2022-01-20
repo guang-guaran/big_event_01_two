@@ -15,7 +15,7 @@ axios.interceptors.request.use(function (config) {
 
 // 响应拦截器 登录拦截
 axios.interceptors.response.use(function (response) {
-  console.log(response)
+  // console.log(response)
   if (response.data.message == '身份认证失败！') {
     // 跳回登录页
     location.href = '/login.html'

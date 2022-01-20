@@ -4,7 +4,7 @@ jQuery(function () {
   getUserInfo()
 
   // 2. 退出登录
-  $('#loginout').on('click', function () {
+  $('#logout').on('click', function () {
     // 弹出层询问
     layer.confirm('确认退出登录吗？', {
       icon: 3,
@@ -33,7 +33,7 @@ function getUserInfo() {
   }).then(({
     data: res
   }) => {
-    console.log(res)
+    // console.log(res)
     if (res.status !== 0) {
       return layer.msg(res.message)
     }
